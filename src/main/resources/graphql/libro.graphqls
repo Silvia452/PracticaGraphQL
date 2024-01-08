@@ -1,0 +1,29 @@
+#libro.graphqls
+
+type Libro {
+    id: ID!
+    title: String!
+    author: String!
+    category: String!
+    # Otros campos relevantes del libro
+}
+
+input LibroInput {
+    title: String!
+    authorId: ID!
+    categoryId: ID!
+    # Otros campos relevantes del libro
+}
+
+type Query {
+    getAllBooks: [Libro!]!
+    getBookById(id: ID!): Libro
+    # Otras consultas de libros
+}
+
+type Mutation {
+    createBook(input: LibroInput!): Libro!
+    updateBook(id: ID!, input: LibroInput!): Libro!
+    deleteBook(id: ID!): Boolean
+    # Otras mutaciones de libros
+}

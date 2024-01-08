@@ -1,0 +1,29 @@
+#lector.graphqls
+
+type Lector {
+    id: ID!
+    name: String!
+    apellido: String!
+    dni: String!
+
+}
+
+input LectorInput {
+    name: String!
+    apellido: String!
+    ni: String!
+
+}
+
+type Query {
+    getAllReaders: [Lector!]!
+    getReaderById(id: ID!): Lector
+    # Otras consultas de lectores
+}
+
+type Mutation {
+    createReader(input: LectorInput!): Lector!
+    updateReader(id: ID!, input: LectorInput!): Lector!
+    deleteReader(id: ID!): Boolean
+    # Otras mutaciones de lectores
+}
