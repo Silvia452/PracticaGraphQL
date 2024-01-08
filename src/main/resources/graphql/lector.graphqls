@@ -11,7 +11,7 @@ type Lector {
 input LectorInput {
     name: String!
     apellido: String!
-    ni: String!
+    dni: String!
 
 }
 

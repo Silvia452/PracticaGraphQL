@@ -1,1 +1,29 @@
 #prestamo.graphqls
+
+type Loan {
+    id: ID!
+    startDate: String!
+    endDate: String!
+    # Otros campos relevantes del préstamo
+}
+
+input LoanInput {
+    bookId: ID!
+    readerId: ID!
+    startDate: String!
+    endDate: String!
+    # Otros campos relevantes del préstamo
+}
+
+type Query {
+    getAllLoans: [Loan!]!
+    getLoanById(id: ID!): Loan
+    # Otras consultas de préstamos
+}
+
+type Mutation {
+    createLoan(input: LoanInput!): Loan!
+    updateLoan(id: ID!, input: LoanInput!): Loan!
+    deleteLoan(id: ID!): Boolean
+    # Otras mutaciones de préstamos
+}

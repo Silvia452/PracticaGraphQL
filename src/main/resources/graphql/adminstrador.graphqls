@@ -1,1 +1,32 @@
 #administrador.graphqls
+
+type Administrador {
+    id: ID!
+    nombre: String!
+    apellido: String!
+    dni: String!
+    zona: String!
+    # Otros campos relevantes del administrador
+}
+
+input AdministradorInput {
+    nombre: String!
+    apellido: String!
+    dni: String!
+    zona: String!
+    # Otros campos relevantes del administrador
+}
+
+type Query {
+    obtenerTodosAdministradores: [Administrador!]!
+    obtenerAdministradorPorId(id: ID!): Administrador
+    # Otras consultas de administradores
+}
+
+type Mutation {
+    crearAdministrador(input: AdministradorInput!): Administrador!
+    actualizarAdministrador(id: ID!, input: AdministradorInput!): Administrador!
+    eliminarAdministrador(id: ID!): Boolean
+    # Otras mutaciones de administradores
+}
+
