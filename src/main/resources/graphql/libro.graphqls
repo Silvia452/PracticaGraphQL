@@ -16,7 +16,7 @@ input LibroInput {
 }
 
 type Query {
-    getAllBooks: [Libro!]!
+    getAllBooks: [Libro!]
     getBookById(id: ID!): Libro
     # Otras consultas de libros
 }

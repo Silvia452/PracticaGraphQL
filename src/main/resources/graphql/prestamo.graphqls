@@ -16,7 +16,7 @@ input LoanInput {
 }
 
 type Query {
-    getAllLoans: [Loan!]!
+    getAllLoans: [Loan!]
     getLoanById(id: ID!): Loan
     # Otras consultas de préstamos
 }

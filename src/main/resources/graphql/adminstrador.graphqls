@@ -18,7 +18,7 @@ input AdministradorInput {
 }
 
 type Query {
-    obtenerTodosAdministradores: [Administrador!]!
+    obtenerTodosAdministradores: [Administrador!]
     obtenerAdministradorPorId(id: ID!): Administrador
     # Otras consultas de administradores
 }

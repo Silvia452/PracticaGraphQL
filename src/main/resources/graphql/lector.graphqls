@@ -16,7 +16,7 @@ input LectorInput {
 }
 
 type Query {
-    getAllReaders: [Lector!]!
+    getAllReaders: [Lector!]
     getReaderById(id: ID!): Lector
     # Otras consultas de lectores
 }
